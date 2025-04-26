@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Legendary Finance (LGF) is a community-driven Web3 gaming project offering play-to-earn rewards and decentralized tokenomics." />
-  <title>Legendary Web-Game | LGF Project</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:
-    @400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <title>Legendary Web3-Game | LGF Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -239,36 +238,54 @@
     }
 
     /* Tokenomics Chart Styles */
-    .token-chart {
-      width: 100%;
-      max-width: 500px;
-      margin: 30px auto;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      padding: 20px;
+    .token-chart-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-top: 30px;
     }
 
-    .chart-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .token-details {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+    }
+
+    /* Game Features Section */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .feature-card {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      padding: 25px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 255, 213, 0.2);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 255, 213, 0.2);
+      border-color: var(--primary-color);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
       margin-bottom: 15px;
     }
 
-    .chart-label {
-      display: flex;
-      align-items: center;
-    }
-
-    .chart-color {
-      width: 20px;
-      height: 20px;
-      border-radius: 4px;
-      margin-right: 10px;
-    }
-
-    .chart-value {
-      font-weight: bold;
+    .feature-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
     }
 
     /* Mobile Responsive Styles */
@@ -342,40 +359,6 @@
         padding: 15px 35px;
       }
     }
-
-    /* Game Features Section */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .feature-card {
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-      padding: 25px;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(0, 255, 213, 0.2);
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 255, 213, 0.2);
-      border-color: var(--primary-color);
-    }
-
-    .feature-icon {
-      font-size: 2.5rem;
-      color: var(--primary-color);
-      margin-bottom: 15px;
-    }
-
-    .feature-title {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: var(--primary-color);
-    }
   </style>
 </head>
 <body>
@@ -429,83 +412,24 @@
       </div>
     </section>
 
-    <section id="tokenomics" class="py-20 bg-gray-900 text-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-8 text-center">Tokenomics</h2>
-
-    <div class="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-16">
+    <section id="tokenomics">
+      <h2>Tokenomics</h2>
+      <p>Our transparent token distribution ensures long-term sustainability and community growth.</p>
       
-      <!-- Pie Chart -->
-      <div class="w-full lg:w-1/2">
+      <div class="token-chart-container">
         <canvas id="tokenomicsChart" width="400" height="400"></canvas>
+        
+        <div class="token-details">
+          <h3>Token Details</h3>
+          <ul>
+            <li><strong>Name:</strong> Legendary Finance</li>
+            <li><strong>Symbol:</strong> LGF</li>
+            <li><strong>Network:</strong> TRON (TRC20)</li>
+            <li><strong>Total Supply:</strong> 35,000 LGF</li>
+            <li><strong>Contract:</strong> TNhQvaZPerVLF6YUajsTEkHfzr7jBNXCR1</li>
+          </ul>
+        </div>
       </div>
-
-      <!-- Breakdown List -->
-      <div class="w-full lg:w-1/2 space-y-4 text-lg">
-        <div><span class="font-semibold text-blue-400">Community:</span> 30%</div>
-        <div><span class="font-semibold text-yellow-400">Liquidity:</span> 25%</div>
-        <div><span class="font-semibold text-red-400">Team & Development:</span> 20%</div>
-        <div><span class="font-semibold text-teal-400">Airdrop:</span> 15%</div>
-        <div><span class="font-semibold text-green-400">Marketing & Partner:</span> 10%</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Chart.js CDN -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<!-- Pie Chart Script -->
-<script>
-  const ctx = document.getElementById('tokenomicsChart').getContext('2d');
-  const tokenomicsChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-      labels: [
-        'Community (30%)',
-        'Liquidity (25%)',
-        'Team & Development (20%)',
-        'Airdrop (15%)',
-        'Marketing & Partner (10%)'
-      ],
-      datasets: [{
-        data: [30, 25, 20, 15, 10],
-        backgroundColor: [
-          '#FFB6C1',
-          '#4169E1',
-          '#E6E6FA',
-          '#228B22',
-          '#B22222'
-        ],
-        borderColor: '#ffffff',
-        borderWidth: 2
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'bottom',
-          labels: {
-            color: '#fff',
-            font: {
-              size: 14
-            }
-          }
-        }
-      }
-    }
-  });
-</script>
-
-      <h3>Token Details</h3>
-      <ul>
-        <li><strong>Name:</strong> Legendary Finance</li>
-        <li><strong>Symbol:</strong> LGF</li>
-        <li><strong>Network:</strong> TRON (TRC20)</li>
-        <li><strong>Total Supply:</strong> 35,000 LGF</li>
-        <li><strong>Contract:</strong> TNhQvaZPerVLF6YUajsTEkHfzr7jBNXCR1</li>
-      </ul>
     </section>
 
     <section id="roadmap">
@@ -542,14 +466,14 @@
       
       <h3>How to Participate:</h3>
       <ol>
-        <li>Join our <a href="https://t.me/legendaryfinancegame" target="_blank">Telegram group</a></li>
-        <li>Follow our <a href="https://x.com/LegendaryFinanc" target="_blank">Twitter page</a></li>
+        <li>Join our <a href="https://t.me/legendaryfinancegame" target="_blank" rel="noopener noreferrer">Telegram group</a></li>
+        <li>Follow our <a href="https://x.com/LegendaryFinanc" target="_blank" rel="noopener noreferrer">Twitter page</a></li>
         <li>Retweet our pinned tweet</li>
-        <li>Submit your details via our <a href="https://t.me/lgfairdropbot" target="_blank">Airdrop Bot</a></li>
+        <li>Submit your details via our <a href="https://t.me/lgfairdropbot" target="_blank" rel="noopener noreferrer">Airdrop Bot</a></li>
         <li>Wait for verification and token distribution</li>
       </ol>
       
-      <a href="https://t.me/lgfairdropbot" target="_blank" class="cta-button" style="display: inline-block; margin-top: 20px;">
+      <a href="https://t.me/lgfairdropbot" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; margin-top: 20px;">
         Start Airdrop Tasks Now
       </a>
     </section>
@@ -577,10 +501,9 @@
 
       <p>Read our detailed whitepaper to understand the full vision of Legendary Finance.</p>
       
-      <a href="https://drive.google.com/uc?export=download&id=1-7XgsxirunV3LlPiATJOgF1JB8CIiiT2" target="_blank" rel="noopener noreferrer">
-  Download Full Guide
-        </a>
-      </div>
+      <a href="https://drive.google.com/uc?export=download&id=1-7XgsxirunV3LlPiATJOgF1JB8CIiiT2" target="_blank" rel="noopener noreferrer" class="cta-button">
+        Download Full Guide
+      </a>
       
       <h3>Summary</h3>
       <ul>
@@ -600,8 +523,8 @@
             <i class="fab fa-telegram"></i>
           </div>
           <h3 class="feature-title">Telegram</h3>
-          <p><a href="https://t.me/legendaryfinancegame" target="_blank">Join Group</a></p>
-          <p><a href="https://t.me/legendaryfinancetoken" target="_blank">News Channel</a></p>
+          <p><a href="https://t.me/legendaryfinancegame" target="_blank" rel="noopener noreferrer">Join Group</a></p>
+          <p><a href="https://t.me/legendaryfinancetoken" target="_blank" rel="noopener noreferrer">News Channel</a></p>
         </div>
         
         <div class="feature-card" style="text-align: center;">
@@ -609,7 +532,7 @@
             <i class="fab fa-twitter"></i>
           </div>
           <h3 class="feature-title">Twitter</h3>
-          <p><a href="https://x.com/LegendaryFinanc" target="_blank">Follow Us</a></p>
+          <p><a href="https://x.com/LegendaryFinanc" target="_blank" rel="noopener noreferrer">Follow Us</a></p>
         </div>
         
         <div class="feature-card" style="text-align: center;">
@@ -617,7 +540,7 @@
             <i class="fab fa-discord"></i>
           </div>
           <h3 class="feature-title">Discord</h3>
-          <p><a href="https://discord.gg/qCntbXX4" target="_blank">Join Server</a></p>
+          <p><a href="https://discord.gg/qCntbXX4" target="_blank" rel="noopener noreferrer">Join Server</a></p>
         </div>
       </div>
     </section>
@@ -628,11 +551,60 @@
     <p>The future of play-to-earn gaming on TRON blockchain.</p>
     
     <div class="social-links">
-      <a href="https://t.me/legendaryfinancegame" target="_blank"><i class="fab fa-telegram"></i></a>
-      <a href="https://x.com/LegendaryFinanc" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://discord.gg/qCntbXX4" target="_blank"><i class="fab fa-discord"></i></a>
-      <a href="https://github.com/legendaryfinance" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/legendaryfinancegame" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
+      <a href="https://x.com/LegendaryFinanc" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+      <a href="https://discord.gg/qCntbXX4" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+      <a href="https://github.com/legendaryfinance" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
     </div>
   </footer>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Pie Chart Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+      const tokenomicsChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: [
+            'Community (30%)',
+            'Liquidity (25%)',
+            'Team & Development (20%)',
+            'Airdrop (15%)',
+            'Marketing & Partner (10%)'
+          ],
+          datasets: [{
+            data: [30, 25, 20, 15, 10],
+            backgroundColor: [
+              '#00ffd5',
+              '#004e92',
+              '#7b00ff',
+              '#ff00aa',
+              '#ffee00'
+            ],
+            borderColor: '#ffffff',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                color: '#fff',
+                font: {
+                  size: 14
+                }
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
+
